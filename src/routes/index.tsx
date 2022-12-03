@@ -1,25 +1,35 @@
-import {
-  createBrowserRouter
-} from 'react-router-dom'
-
+import type React from 'react'
 import ErrorPage from '@/error-page'
-import App from '@/App'
+import Home from '@/apps/Home'
 import Bin2Dec from '@/apps/001.Bin2Dec'
 
-const router = createBrowserRouter([
+export interface RouteType {
+  path: string
+  element: React.FC
+  meta?: {
+    title: string
+  }
+}
+
+const routes: RouteType[] = [
   {
     path: '/',
-    element: <App />,
-    errorElement: <ErrorPage />
+    element: Home,
+    meta: {
+      title: 'Home'
+    }
   },
   {
-    path: '/001',
-    element: <Bin2Dec message='Bin2Dec App'/>
+    path: '001',
+    element: Bin2Dec,
+    meta: {
+      title: 'Bin2Dec'
+    }
   },
   {
-    path: '/test',
-    element: <div>test</div>
+    path: '*',
+    element: ErrorPage
   }
-])
+]
 
-export default router
+export default routes

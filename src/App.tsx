@@ -1,48 +1,32 @@
-import { Link } from 'react-router-dom'
-import type { FC } from 'react'
-import Item from '@/components/Item'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import React from 'react'
+import routes from '@/routes/index'
+import type { RouteType } from '@/routes/index'
 
-export interface AppItem {
-  id: string
-  title: string
+interface Props {
+  route: RouteType
 }
 
-const apps: AppItem[] = [
-  { id: '001', title: 'Bin2Dec' },
-  { id: '002', title: 'Bin2Dec' },
-  { id: '003', title: 'Bin2Dec' }
-]
+const DomTitle = ({ route }: Props) => {
+  if (route?.meta?.title)
+    document.title = `${route.meta.title} | 100 React Apps`
+  return <route.element />
+}
 
-const App: FC = () => {
+export default function App() {
   return (
-    <div mt-20 lg:mx-50 md:mx-40 sm:mx-30 mx-20 font-mono>
-      <h1 text="xl primary" font="mono bold" py-1>100 React Apps</h1>
-      <div mb-5 text-gray-500>
-        Try to implement apps from
-        <a href="https://github.com/florinpop17/app-ideas" target="_blank" text-primary> here </a>
-        with React.
-      </div>
-      <div flex flex-wrap mb-10>
-        {
-          apps.map(({ id, title }) => {
-            return (
-              <div key={id} m="r-20">
-                <Link to={`/${id}`}>
-                  <Item title={title} id={id}/>
-                </Link>
-              </div>
-            )
-          })
-        }
-      </div>
-      <div text-gray-500>
-        <a href="https://mphy.me" target="_blank">@mphy</a>
-        <span> . </span>
-        <a href="https://github.com/Hacker-C/100" target="_blank">github</a>
-        <div text-gray-400>from 2022/12/02</div>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        {routes.map((item, index) => {
+          return (
+            <Route
+              key={index}
+              path={item.path}
+              element={<DomTitle route={item}/>}
+            />
+          )
+        })}
+      </Routes>
+    </Router>
   )
 }
-
-export default App

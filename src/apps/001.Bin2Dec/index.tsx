@@ -1,6 +1,7 @@
 import type { FC, FormEvent } from 'react'
 import { useEffect, useState } from 'react'
 import BackToHome from '@/components/BackToHome'
+import Date from '@/components/Date'
 
 enum Status {
   success = 0,
@@ -61,6 +62,7 @@ const Bin2Dec: FC = () => {
 
         <span h-10 mt-5 text-3xl>{ status === Status.success && dnum }</span>
       </main>
+      <Date date='2022/12/03'/>
     </div>
   )
 }

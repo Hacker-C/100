@@ -1,4 +1,7 @@
-import type { AppItem } from '@/apps/Home'
+interface AppItem {
+  id: string
+  title: string
+}
 
 function Item(props: AppItem) {
   const { id, title } = props

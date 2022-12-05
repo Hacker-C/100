@@ -1,17 +1,7 @@
 import { Link } from 'react-router-dom'
 import type { FC } from 'react'
 import Item from '@/components/Item'
-
-export interface AppItem {
-  id: string
-  title: string
-}
-
-const apps: AppItem[] = [
-  { id: '001', title: 'Bin2Dec' },
-  { id: '002', title: 'Bin2Dec' },
-  { id: '003', title: 'Bin2Dec' }
-]
+import routes from '@/routes'
 
 const App: FC = () => {
   return (
@@ -24,11 +14,11 @@ const App: FC = () => {
       </div>
       <div flex flex-wrap mb-10>
         {
-          apps.map(({ id, title }) => {
-            return (
-              <div key={id} m="r-20">
-                <Link to={`/${id}`}>
-                  <Item title={title} id={id}/>
+          routes.map(({ path, meta }) => {
+            return /\d/.test(path) && (
+              <div key={path} m="r-20">
+                <Link to={`/${path}`}>
+                  <Item title={meta.title} id={path}/>
                 </Link>
               </div>
             )

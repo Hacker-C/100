@@ -1,10 +1,17 @@
-import { defineConfig, presetAttributify, presetUno } from 'unocss'
+import { defineConfig, presetAttributify, presetUno, presetWebFonts } from 'unocss'
 import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
 
 export default defineConfig({
   presets: [
     presetAttributify(),
-    presetUno()
+    presetUno(),
+    presetWebFonts({
+      provider: 'bunny', // the provider for china
+      fonts: {
+        sans: 'Roboto',
+        mono: ['Fira Code', 'Fira Mono:400,700']
+      }
+    })
   ],
   shortcuts: {
     bg: 'bg-red-800'
@@ -23,9 +30,6 @@ export default defineConfig({
   theme: {
     colors: {
       primary: '#149eca'
-    },
-    fontFamily: {
-      mono: ['Fira Code', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace', 'dank mono']
     }
   }
 })

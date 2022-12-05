@@ -1,0 +1,10 @@
+/* two range input */
+[type="range"] {
+  pointer-events: none;
+}
+[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+}
+[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+}

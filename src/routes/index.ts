@@ -2,11 +2,12 @@ import type React from 'react'
 import ErrorPage from '@/error-page'
 import Home from '@/apps/Home'
 import Bin2Dec from '@/apps/001.Bin2Dec'
+import BorderRadiusPreviewer from '@/apps/002.BorderRadiusPreviewer'
 
 export interface RouteType {
   path: string
   element: React.FC
-  meta?: {
+  meta: {
     title: string
   }
 }
@@ -27,8 +28,18 @@ const routes: RouteType[] = [
     }
   },
   {
+    path: '002',
+    element: BorderRadiusPreviewer,
+    meta: {
+      title: 'Border-radius Previewer'
+    }
+  },
+  {
     path: '*',
-    element: ErrorPage
+    element: ErrorPage,
+    meta: {
+      title: 'Page not found'
+    }
   }
 ]
 

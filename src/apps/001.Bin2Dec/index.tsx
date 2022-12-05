@@ -1,6 +1,6 @@
 import type { FC, FormEvent } from 'react'
 import { useEffect, useState } from 'react'
-import BackToHome from '@/components/BackToHome'
+import TopView from '@/components/TopView'
 import Date from '@/components/Date'
 
 enum Status {
@@ -40,7 +40,7 @@ const Bin2Dec: FC = () => {
   }, [bnum])
   return (
     <div h-screen flex flex-col>
-      <BackToHome title='Bin2Dec'/>
+      <TopView title='Bin2Dec'/>
       <main flex-1 flex flex-col justify-center items-center>
         <h1 text='4xl center' font="bold mono">Bin2Dec</h1>
         <p p-1 text="gray-600 md">Enter a binary number to get a decimal number</p>

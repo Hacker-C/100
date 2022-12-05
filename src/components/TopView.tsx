@@ -5,7 +5,7 @@ interface AppProps {
   title: string
 }
 
-function BackToHome({ title }: AppProps) {
+function TopView({ title }: AppProps) {
   return (
     <header p-4 flex font-mono>
       <Link to="/" hover:text-black>
@@ -16,4 +16,4 @@ function BackToHome({ title }: AppProps) {
   )
 }
 
-export default BackToHome
+export default TopView

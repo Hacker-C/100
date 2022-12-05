@@ -14,7 +14,8 @@ export default defineConfig({
     })
   ],
   shortcuts: {
-    bg: 'bg-red-800'
+    bg: 'bg-red-800',
+    'flex-center': 'flex justify-center items-center'
   },
   rules: [
     ['centered', {

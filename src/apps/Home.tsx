@@ -5,7 +5,7 @@ import routes from '@/routes'
 
 const App: FC = () => {
   return (
-    <div mt-20 lg:mx-50 md:mx-40 sm:mx-30 mx-20 font-mono>
+    <div mt-20 lg:mx-50 md:mx-40 sm:mx-30 mx-5 font-mono className='min-w-[350px]'>
       <h1 text="xl primary" font="mono bold" py-1>100 React Apps</h1>
       <div mb-5 text-gray-500>
         Try to implement apps from

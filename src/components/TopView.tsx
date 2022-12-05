@@ -7,12 +7,13 @@ interface AppProps {
 
 function TopView({ title }: AppProps) {
   return (
-    <header p-4 flex font-mono>
-      <Link to="/" hover:text-black>
+    <Link to="/" hover:text-black>
+      <header p-4 flex font-mono>
         <Icon icon="material-symbols:arrow-back-ios-rounded" width="20" text-gray-500 hover:text-black/>
-      </Link>
-      <h1 flex-1 text-center font-bold>{title} App</h1>
-    </header>
+        <h1 flex-1 text-center font-bold>{title} App</h1>
+      </header>
+    </Link>
+
   )
 }
 

@@ -11,7 +11,7 @@ const DomTitle = ({ route }: Props) => {
   if (route?.meta?.title)
     document.title = `${route.meta.title} | 100 React Apps`
   return (
-    <Suspense>
+    <Suspense fallback={<h1 text-center>Loading...</h1>}>
       <route.element />
     </Suspense>
   )

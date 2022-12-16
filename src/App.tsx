@@ -1,5 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import React from 'react'
+import React, { Suspense } from 'react'
 import routes from '@/routes/index'
 import type { RouteType } from '@/routes/index'
 
@@ -10,7 +10,11 @@ interface Props {
 const DomTitle = ({ route }: Props) => {
   if (route?.meta?.title)
     document.title = `${route.meta.title} | 100 React Apps`
-  return <route.element />
+  return (
+    <Suspense>
+      <route.element />
+    </Suspense>
+  )
 }
 
 export default function App() {

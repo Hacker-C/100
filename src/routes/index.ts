@@ -1,8 +1,9 @@
 import type React from 'react'
-import ErrorPage from '@/error-page'
+import { lazy } from 'react'
 import Home from '@/apps/Home'
-import Bin2Dec from '@/apps/001.Bin2Dec'
-import BorderRadiusPreviewer from '@/apps/002.BorderRadiusPreviewer'
+const ErrorPage = lazy(() => import('@/error-page'))
+const Bin2Dec = lazy(() => import('@/apps/001.Bin2Dec'))
+const BorderRadiusPreviewer = lazy(() => import('@/apps/002.BorderRadiusPreviewer'))
 
 export interface RouteType {
   path: string

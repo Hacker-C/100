@@ -1,7 +1,14 @@
 import { Link } from 'react-router-dom'
 import type { FC } from 'react'
 import Item from '@/components/Item'
-import routes from '@/routes'
+// import routes from '@/routes'
+
+const routes = [
+  { path: '/', title: 'Home' },
+  { path: '001', title: 'Bin2Dec' },
+  { path: '002', title: 'Border-radius Previewer' },
+  { path: '*', title: 'Page not found' }
+]
 
 const App: FC = () => {
   return (
@@ -14,11 +21,11 @@ const App: FC = () => {
       </div>
       <div flex flex-wrap mb-10>
         {
-          routes.map(({ path, meta }) => {
+          routes.map(({ path, title }) => {
             return /\d/.test(path) && (
               <div key={path} m="r-20">
                 <Link to={`/${path}`}>
-                  <Item title={meta.title} id={path}/>
+                  <Item title={title} id={path} />
                 </Link>
               </div>
             )

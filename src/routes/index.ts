@@ -4,6 +4,7 @@ import Home from '@/apps/Home'
 const ErrorPage = lazy(() => import('@/error-page'))
 const Bin2Dec = lazy(() => import('@/apps/001.Bin2Dec'))
 const BorderRadiusPreviewer = lazy(() => import('@/apps/002.BorderRadiusPreviewer'))
+const MemeMaker = lazy(() => import('@/apps/003.MemeMaker'))
 
 export interface RouteType {
   path: string
@@ -33,6 +34,13 @@ const routes: RouteType[] = [
     element: BorderRadiusPreviewer,
     meta: {
       title: 'Border-radius Previewer'
+    }
+  },
+  {
+    path: '003',
+    element: MemeMaker,
+    meta: {
+      title: 'Meme Maker'
     }
   },
   {

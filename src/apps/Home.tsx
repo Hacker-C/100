@@ -7,6 +7,7 @@ const routes = [
   { path: '/', title: 'Home' },
   { path: '001', title: 'Bin2Dec' },
   { path: '002', title: 'Border-radius Previewer' },
+  { path: '003', title: 'Meme Maker' },
   { path: '*', title: 'Page not found' }
 ]
 

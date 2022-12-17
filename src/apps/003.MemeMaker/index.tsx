@@ -16,8 +16,8 @@ function MemeMaker() {
   const descRef = useRef<HTMLDivElement>()
   const [titleFontSize, setTitleFontSize] = useState(40)
   const [descFontSize, setDescFontSize] = useState(26)
-  const [titlePos, setTitlePos] = useState({ left: '50%', top: 200 })
-  const [descPos, setDescPos] = useState({ left: '50%', top: 260 })
+  const [titlePos, setTitlePos] = useState({ left: 0, top: 200 })
+  const [descPos, setDescPos] = useState({ left: 0, top: 260 })
 
   const memeRef = useRef<HTMLDivElement>()
   const download = () => {
@@ -45,7 +45,6 @@ function MemeMaker() {
             className='absolute min-h-12 cursor-move select-none w-100% text-center'
             style={{
               ...titlePos,
-              translate: '-50%',
               fontSize: `${titleFontSize}px`
             }}
             ref={titleRef as LegacyRef<HTMLDivElement>}
@@ -58,7 +57,6 @@ function MemeMaker() {
             className='absolute min-h-12 cursor-move select-none w-100% text-center'
             style={{
               ...descPos,
-              translate: '-50%',
               fontSize: `${descFontSize}px`
             }}
             ref={descRef as LegacyRef<HTMLDivElement>}

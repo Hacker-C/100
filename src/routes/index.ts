@@ -1,6 +1,6 @@
 import type React from 'react'
 import { lazy } from 'react'
-import Home from '@/apps/Home'
+import Home from '@/apps'
 const ErrorPage = lazy(() => import('@/error-page'))
 const Bin2Dec = lazy(() => import('@/apps/001.Bin2Dec'))
 const BorderRadiusPreviewer = lazy(() => import('@/apps/002.BorderRadiusPreviewer'))

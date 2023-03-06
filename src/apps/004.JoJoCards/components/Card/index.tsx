@@ -27,11 +27,12 @@ function Card({ id, src, isFront }: Hero) {
       '
       onClick={handleClick}
     >
-      {
-        isFront
-          ? <img src={src} alt={src} width="100%" />
-          : <div className='h-100% w-100% bg-#f3e792'></div>
-      }
+       <div relative>
+        <img src={src} alt={src} width="100%" />
+        <div
+          className='w-100% bg-#f3e792 absolute top-0 left-0 aspect-square'
+          style={{ display: isFront ? 'none' : '' }}></div>
+      </div>
     </div>
   )
 }

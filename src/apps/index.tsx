@@ -8,6 +8,7 @@ const routes = [
   { path: '001', title: 'Bin2Dec' },
   { path: '002', title: 'Border-radius Previewer' },
   { path: '003', title: 'Meme Maker' },
+  { path: '004', title: 'JoJo Cards Game' },
   { path: '*', title: 'Page not found' }
 ]
 

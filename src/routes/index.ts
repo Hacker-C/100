@@ -5,6 +5,7 @@ const ErrorPage = lazy(() => import('@/error-page'))
 const Bin2Dec = lazy(() => import('@/apps/001.Bin2Dec'))
 const BorderRadiusPreviewer = lazy(() => import('@/apps/002.BorderRadiusPreviewer'))
 const MemeMaker = lazy(() => import('@/apps/003.MemeMaker'))
+const JoJoCards = lazy(() => import('@/apps/004.JoJoCards'))
 
 export interface RouteType {
   path: string
@@ -41,6 +42,13 @@ const routes: RouteType[] = [
     element: MemeMaker,
     meta: {
       title: 'Meme Maker'
+    }
+  },
+  {
+    path: '004',
+    element: JoJoCards,
+    meta: {
+      title: 'JoJo Cards Game'
     }
   },
   {

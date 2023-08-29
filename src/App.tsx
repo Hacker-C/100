@@ -7,11 +7,13 @@ interface Props {
   route: RouteType
 }
 
+const Loading = () => <h1 text-center h-100vh leading-100vh text-xl text-primary>Loading...</h1>
+
 const DomTitle = ({ route }: Props) => {
   if (route?.meta?.title)
     document.title = `${route.meta.title} | 100 React Apps`
   return (
-    <Suspense fallback={<h1 text-center>Loading...</h1>}>
+    <Suspense fallback={<Loading />}>
       <route.element />
     </Suspense>
   )

@@ -1,4 +1,23 @@
 .container {
-	box-shadow: 0 0 20px 0 #ff9501;
+	box-shadow: 0 0 10px 0 #ff9501;
 	padding: 2rem;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #56585d;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 7px;
+  border: 2px solid #56585d;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9f9f9f;
 }

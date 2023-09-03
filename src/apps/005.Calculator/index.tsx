@@ -17,15 +17,14 @@ const Calculator: React.FC<{}> = () => {
         h20 w100 overflow-hidden px5
         font-bold text-white text-right
       >
-        <input
-          value={input}
+        <div
           className='scrollbar h10 w70 text-3xl overflow-x-auto output text-white  whitespace-nowrap text-right bg-transparent outline-none'
           ref={(el) => {
             if (el) {
               el.scrollLeft = el.scrollWidth
             }
           }}
-        />
+        >{input}</div>
         <div h10 text-2xl overflow-x-auto output whitespace-nowrap className='scrollbar'>{output || '0'}</div>
       </div>
       {

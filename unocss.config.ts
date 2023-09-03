@@ -14,12 +14,12 @@ export default defineConfig({
     })
   ],
   shortcuts: {
-    bg: 'bg-red-800',
+    'bg': 'bg-red-800',
     'flex-center': 'flex justify-center items-center'
   },
   rules: [
     ['centered', {
-      position: 'fixed',
+      position: 'absolute',
       left: '50%',
       top: '50%',
       transform: 'translate(-50%, -50%)'

@@ -6,7 +6,7 @@ import Item from '@/components/Item'
 const routes = [
   { path: '/', title: 'Home' },
   { path: '001', title: 'Bin2Dec' },
-  { path: '002', title: 'Border-radius Previewer' },
+  { path: '002', title: 'Border-radius' },
   { path: '003', title: 'Meme Maker' },
   { path: '004', title: 'JoJo Cards Game' },
   { path: '005', title: 'Calculator' },
@@ -15,18 +15,20 @@ const routes = [
 
 const App: FC = () => {
   return (
-    <div mt-20 lg:mx-50 md:mx-40 sm:mx-30 mx-5 font-mono className='min-w-[350px]'>
-      <h1 text="xl primary" font="mono bold" py-1>100 React Apps</h1>
+    // mt-20 lg:mx-50 md:mx-40 sm:mx-30 mx-5
+    // min-w-[350px]
+    <div font-mono className='centered'>
+      <h1 text="xl primary" font="mono bold" py-1>100 Apps</h1>
       <div mb-5 text-gray-500>
-        Try to implement apps from
-        <a href="https://github.com/florinpop17/app-ideas" target="_blank" text-primary> here </a>
-        with React.
+        Try to implement apps(some come from
+        <a href="https://github.com/florinpop17/app-ideas" target="_blank" text-primary> here</a>
+      ) with React.
       </div>
-      <div flex flex-wrap mb-10>
+      <div className='grid gap-x-4 gap-y-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
         {
           routes.map(({ path, title }) => {
             return /\d/.test(path) && (
-              <div key={path} m="r-20">
+              <div key={path}>
                 <Link to={`/${path}`}>
                   <Item title={title} id={path} />
                 </Link>
@@ -35,9 +37,9 @@ const App: FC = () => {
           })
         }
       </div>
-      <div text-gray-500>
+      <div text-gray-500 mt5>
         <a href="https://mphy.me" target="_blank">@mphy</a>
-        <span> . </span>
+        <span> · </span>
         <a href="https://github.com/Hacker-C/100" target="_blank">github</a>
         <div text-gray-400>from 2022/12/02</div>
       </div>

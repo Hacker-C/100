@@ -8,7 +8,7 @@ const buttons = Object.values(Operator)
 
 const Calculator: React.FC<{}> = () => {
   const { input, output, execute } = useCalculator()
-  return <AppWrapper title='Calculator' date='2023/08/29'>
+  return <AppWrapper title='Calculator' date='2023/08/29' darkTheme={'#282c34'}>
     <div
       h160 w100 centered flex flex-wrap justify-between rounded
       className='container bg-[#56585d]'
@@ -25,7 +25,7 @@ const Calculator: React.FC<{}> = () => {
             }
           }}
         >{input}</div>
-        <div h10 text-2xl overflow-x-auto output whitespace-nowrap className='scrollbar'>{output || '0'}</div>
+        <div h10 text-2xl overflow-x-auto whitespace-nowrap className='scrollbar'>{output || '0'}</div>
       </div>
       {
         buttons.map((text, index) => {

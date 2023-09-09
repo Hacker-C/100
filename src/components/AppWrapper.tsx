@@ -12,8 +12,11 @@ interface AppWrapperProps {
   darkTheme?: string
 }
 
-const AppWrapper = ({ children, title, date, darkTheme }: AppWrapperProps) => {
-  return <div bg={darkTheme} text='white' h='100vh'>
+const AppWrapper = ({ children, title, date, darkTheme = 'white' }: AppWrapperProps) => {
+  return <div style={{
+    backgroundColor: darkTheme,
+    color: darkTheme ? 'black' : 'white'
+  }} h='100vh'>
     <TopView title={title} dark/>
     { children }
     <Date date={date}/>

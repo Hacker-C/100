@@ -15,7 +15,7 @@ function TopView({ title, dark = false }: AppProps) {
     <Link to="/">
       <header p-4 flex font-mono>
         <Icon icon="material-symbols:arrow-back-ios-rounded" width="20" className={clazz}/>
-        <h1 flex-1 text-center font-bold>{title} App</h1>
+        <h1 flex-1 text-center font-bold className={clazz}>{title} App</h1>
       </header>
     </Link>
 

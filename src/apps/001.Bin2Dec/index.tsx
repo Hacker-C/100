@@ -42,7 +42,7 @@ const Bin2Dec: FC = () => {
     <div h-screen flex flex-col>
       <TopView title='Bin2Dec'/>
       <main flex-1 flex flex-col justify-center items-center>
-        <h1 text='4xl center' font="bold mono">Bin2Dec</h1>
+        <h1 text='4xl center dark:white' font="bold mono">Bin2Dec</h1>
         <p p-1 text="gray-600 md">Enter a binary number to get a decimal number</p>
         <input
           type="text" border="2 solid black" font-mono outline-none text-3xl p-2
@@ -60,7 +60,7 @@ const Bin2Dec: FC = () => {
           }
         </div>
 
-        <span h-10 mt-5 text-3xl>{ status === Status.success && dnum }</span>
+        <span h-10 mt-5 text-3xl dark:text-white>{ status === Status.success && dnum }</span>
       </main>
       <Date date='2022/12/03'/>
     </div>

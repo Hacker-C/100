@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import type { FC } from 'react'
 import Item from '@/components/Item'
+import { useDark } from '@/hooks'
+// TODO
 // import routes from '@/routes'
 
 const routes = [
@@ -13,13 +15,14 @@ const routes = [
   { path: '*', title: 'Page not found' }
 ]
 
-const App: FC = () => {
+const Home: FC = () => {
+  const { isDark, toggleTheme } = useDark()
   return (
     // mt-20 lg:mx-50 md:mx-40 sm:mx-30 mx-5
     // min-w-[350px]
     <div font-mono className='centered'>
       <h1 text="xl primary" font="mono bold" py-1>100 Apps</h1>
-      <div mb-5 text-gray-500>
+      <div mb-5 text-gray-500 dark:text-gray-300>
         Try to implement apps(some come from
         <a href="https://github.com/florinpop17/app-ideas" target="_blank" text-primary> here</a>
       ) with React.
@@ -38,13 +41,17 @@ const App: FC = () => {
         }
       </div>
       <div text-gray-500 mt5>
-        <a href="https://mphy.me" target="_blank">@mphy</a>
+        <a href="https://mphy.me" target="_blank" hover:text-primary>@mphy</a>
         <span> · </span>
-        <a href="https://github.com/Hacker-C/100" target="_blank">github</a>
-        <div text-gray-400>from 2022/12/02</div>
+        <a href="https://github.com/Hacker-C/100" target="_blank" hover:text-primary>github</a>
+        <span> · </span>
+        <span
+          className='cursor-pointer'
+          onClick={toggleTheme}
+        >{ isDark ? 'light' : 'dark' }</span>
       </div>
     </div>
   )
 }
 
-export default App
+export default Home

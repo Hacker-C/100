@@ -8,7 +8,7 @@ const buttons = Object.values(Operator)
 
 const Calculator: React.FC<{}> = () => {
   const { input, output, execute } = useCalculator()
-  return <AppWrapper title='Calculator' date='2023/08/29' darkTheme={'#282c34'}>
+  return <AppWrapper title='Calculator' date='2023/08/29'>
     <div
       h160 w100 centered flex flex-wrap justify-between rounded
       className='container bg-[#56585d]'

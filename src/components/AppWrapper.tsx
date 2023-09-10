@@ -6,18 +6,12 @@ interface AppWrapperProps {
   children: React.ReactNode
   title: string
   date: string
-  /**
- * darkTheme: 传了值则使用暗黑模式且背景色为该值
- */
   darkTheme?: string
 }
 
-const AppWrapper = ({ children, title, date, darkTheme = 'white' }: AppWrapperProps) => {
-  return <div style={{
-    backgroundColor: darkTheme,
-    color: darkTheme ? 'black' : 'white'
-  }} h='100vh'>
-    <TopView title={title} dark/>
+const AppWrapper = ({ children, title, date }: AppWrapperProps) => {
+  return <div h='100vh'>
+    <TopView title={title} />
     { children }
     <Date date={date}/>
   </div>

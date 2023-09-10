@@ -4,8 +4,7 @@ import Button from './components/Button'
 import type { Status } from './components/CountUp'
 import CountUp from './components/CountUp'
 import CardsList from './components/CardsList'
-import Date from '@/components/Date'
-import TopView from '@/components/TopView'
+import AppWrapper from '@/components/AppWrapper'
 
 export default function JoJoCards() {
   return (
@@ -72,8 +71,7 @@ function JoJoCardsApp() {
     }
   }, [tasks])
   return (
-    <>
-      <TopView title="JoJo Cards Game" />
+    <AppWrapper title='JoJo Cards Game' date='2023/03/05'>
       <CardsList />
       <div flex justify-center m="t-5 b-10">
         <CountUp status={status} />
@@ -86,8 +84,7 @@ function JoJoCardsApp() {
           }}
         >RESET</Button>
       </div>
-      <Date date='2023/03/05' />
-    </>
+    </AppWrapper>
   )
 }
 

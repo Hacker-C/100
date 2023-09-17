@@ -12,6 +12,7 @@ const routes = [
   { path: '003', title: 'Meme Maker' },
   { path: '004', title: 'JoJo Cards Game' },
   { path: '005', title: 'Calculator' },
+  { path: '006', title: 'Christmas Lights' },
   { path: '*', title: 'Page not found' }
 ]
 

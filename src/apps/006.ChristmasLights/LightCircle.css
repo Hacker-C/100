@@ -1,0 +1,136 @@
+:root {
+  --red-light: #e74c3c;
+  --orange-light: #e67e22;
+  --yellow-light: #f1c40f;
+  --green-light: #2ecc71;
+  --blue-light: #1599f2;
+  --indigo-light: #64fcfe;
+  --purple-light: #b525ef;
+  --pink-light: #ff6ec7;
+  --off-light: #563260;
+}
+
+.light-off {
+  background-color: var(--off-light);
+  animation: none !important;
+}
+
+.red {
+  background-color: var(--red-light);
+  animation: red-light 1s infinite;
+}
+
+.orange {
+  background-color: var(--orange-light);
+  animation: orange-light 1s infinite;
+}
+
+.yellow {
+  background-color: var(--yellow-light);
+  animation: yellow-light 1s infinite;
+}
+
+.green {
+  background-color: var(--green-light);
+  animation: green-light 1s infinite;
+}
+
+.blue {
+  background-color: var(--blue-light);
+  animation: blue-light 1s infinite;
+}
+
+.indigo {
+  background-color: var(--indigo-light);
+  animation: indigo-light 1s infinite;
+}
+
+.purple {
+  background-color: var(--purple-light);
+  animation: purple-light 1s infinite;
+}
+
+.pink {
+  background-color: var(--pink-light);
+  animation: pink-light 1s infinite;
+}
+
+@keyframes red-light {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #e74c3c;
+  }
+}
+
+@keyframes orange-light {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px #e67e22;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+@keyframes yellow-light {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #f1c40f;
+  }
+}
+
+@keyframes green-light {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px var(--green-light)
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+@keyframes blue-light {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px var(--blue-light);
+  }
+}
+
+@keyframes indigo-light {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px var(--indigo-light);
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+@keyframes purple-light {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px var(--purple-light);
+  }
+}
+
+@keyframes pink-light {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px var(--pink-light);
+  }
+  50% {
+    box-shadow: none;
+  }
+}

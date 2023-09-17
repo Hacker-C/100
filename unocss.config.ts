@@ -6,7 +6,7 @@ export default defineConfig({
     presetAttributify(),
     presetUno(),
     presetWebFonts({
-      provider: 'bunny', // the provider for china
+      provider: 'none', // the provider for china
       fonts: {
         sans: 'Roboto',
         mono: ['Fira Code', 'Fira Mono:400,700']
@@ -32,5 +32,6 @@ export default defineConfig({
     colors: {
       primary: '#149eca'
     }
-  }
+  },
+  safelist: ['bg-yellow']
 })

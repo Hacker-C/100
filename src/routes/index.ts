@@ -7,6 +7,7 @@ const BorderRadiusPreviewer = lazy(() => import('@/apps/002.BorderRadiusPreviewe
 const MemeMaker = lazy(() => import('@/apps/003.MemeMaker'))
 const JoJoCards = lazy(() => import('@/apps/004.JoJoCards'))
 const Calculator = lazy(() => import('@/apps/005.Calculator'))
+const ChristmasLights = lazy(() => import('@/apps/006.ChristmasLights'))
 
 export interface RouteType {
   path: string
@@ -57,6 +58,13 @@ const routes: RouteType[] = [
     element: Calculator,
     meta: {
       title: 'Calculator'
+    }
+  },
+  {
+    path: '006',
+    element: ChristmasLights,
+    meta: {
+      title: 'Christmas Lights'
     }
   },
   {

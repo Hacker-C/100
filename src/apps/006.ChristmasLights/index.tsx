@@ -7,8 +7,9 @@ const initLights = Object.values(LightTheme).filter(item => item !== LightTheme.
 
 const buttonUnoCss = `
   w14 h14 rounded-full
-  b-3 b-purple-600 bg-transparent
-  text-white text-sm hover:bg-purple-600
+  b-2 b-purple-600 bg-transparent
+  text-black text-sm hover:bg-purple-600
+  dark:text-white hover:text-white
   transition-all duration-300
 `
 
@@ -34,7 +35,7 @@ export default function ChristmasLights() {
         {lights.slice(4).map((light, idx) => <LightBox theme={light} showLine={idx !== 3} speed={speed} key={idx}/>)}
       </div>
     </div>
-    <p text='center white' mt15>Tip: Click to turn on/off each or click buttons below to control all</p>
+    <p text='center black dark:white' mt15>Click buttons below to control the lights</p>
     <div flex justify-center mt15>
       <div flex>
         <button className={buttonUnoCss} onClick={turnOffAll} mr='5'>OFF</button>

@@ -11,16 +11,18 @@ export const LightSpeedCounter = ({ count, max = 5, min = 0, up, down, set }: Li
   const buttonUnoCss = (type: 'up' | 'down') => `
     w7 h7 b-2 b-purple-600 hover:bg-purple-600
     ${type === 'up' ? 'rounded-tr-xl mb1' : 'rounded-br-xl'}
-    text-white
+    text-black dark:text-white hover:text-white
   `
   const leftButtonUnoCss = `
     h15 w7 b-2 b-purple-600 hover:bg-purple-600
     rounded-l-xl text-white
+    text-black dark:text-white hover:text-white
   `
   const inputUnoCSS = `
     b-2 b-purple-600
     outline-0 focus:outline-purple-600
     w15 h15 text-center text-lg mx1
+    dark:bg-gray-800 dark:text-white
   `
   return <div flex>
     <button className={leftButtonUnoCss} onClick={() => set?.(3)}> R </button>

@@ -73,7 +73,7 @@ function JoJoCardsApp() {
   return (
     <AppWrapper title='JoJo Cards Game' date='2023/03/05'>
       <CardsList />
-      <div flex justify-center m="t-5 b-10">
+      <div flex justify-center py5>
         <CountUp status={status} />
         <Button
           onClick={() => {

@@ -31,6 +31,15 @@ export default defineConfig({
   theme: {
     colors: {
       primary: '#149eca'
+    },
+    breakpoints: {
+      xs: '320px',
+      ss: '460px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      xxl: '1536px'
     }
   },
   safelist: ['bg-yellow']

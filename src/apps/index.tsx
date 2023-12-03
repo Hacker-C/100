@@ -13,6 +13,7 @@ const routes = [
   { path: '004', title: 'JoJo Cards Game' },
   { path: '005', title: 'Calculator' },
   { path: '006', title: 'Christmas Lights' },
+  { path: '007', title: 'Jujutsu ID Card' },
   { path: '*', title: 'Page not found' }
 ]
 

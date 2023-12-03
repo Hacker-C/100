@@ -8,6 +8,7 @@ const MemeMaker = lazy(() => import('@/apps/003.MemeMaker'))
 const JoJoCards = lazy(() => import('@/apps/004.JoJoCards'))
 const Calculator = lazy(() => import('@/apps/005.Calculator'))
 const ChristmasLights = lazy(() => import('@/apps/006.ChristmasLights'))
+const JujutsuIDCard = lazy(() => import('@/apps/007.JujutsuIDCard'))
 
 export interface RouteType {
   path: string
@@ -65,6 +66,13 @@ const routes: RouteType[] = [
     element: ChristmasLights,
     meta: {
       title: 'Christmas Lights'
+    }
+  },
+  {
+    path: '007',
+    element: JujutsuIDCard,
+    meta: {
+      title: 'Jujutsu ID Card'
     }
   },
   {

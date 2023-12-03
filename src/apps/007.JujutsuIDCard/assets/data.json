@@ -1,0 +1,28 @@
+[
+  {
+    "type": "student",
+    "title": "東京都立呪術高等専門学校",
+    "logo": "JujutsuLogo",
+    "id": "123456789",
+    "info": "上記の者は本学学生であることを証明する。",
+    "hero": {
+      "name": "狗卷 棘",
+      "birthdate": "2001年3月7日",
+      "avatar": "InumakiToge",
+      "level": "准一"
+    }
+  },
+  {
+    "type": "teacher",
+    "title": "東京都立呪術高等専門学校",
+    "logo": "JujutsuLogo",
+    "id": "987654321",
+    "info": "上記の者は本学学生であることを証明する。",
+    "hero": {
+      "name": "五条 悟",
+      "birthdate": "1989年12月7日",
+      "avatar": "SatoruGojo",
+      "level": "特"
+    }
+  }
+]

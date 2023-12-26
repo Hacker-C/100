@@ -3,26 +3,39 @@
     "type": "student",
     "title": "東京都立呪術高等専門学校",
     "logo": "JujutsuLogo",
-    "id": "123456789",
+    "id": "20011023",
     "info": "上記の者は本学学生であることを証明する。",
     "hero": {
       "name": "狗卷 棘",
-      "birthdate": "2001年3月7日",
+      "birthdate": "2001年10月23日",
       "avatar": "InumakiToge",
-      "level": "准一"
+      "level": "準一"
     }
   },
   {
     "type": "teacher",
     "title": "東京都立呪術高等専門学校",
     "logo": "JujutsuLogo",
-    "id": "987654321",
-    "info": "上記の者は本学学生であることを証明する。",
+    "id": "19891207",
+    "info": "上記の者は本学教師であることを証明する。",
     "hero": {
       "name": "五条 悟",
       "birthdate": "1989年12月7日",
       "avatar": "SatoruGojo",
       "level": "特"
+    }
+  },
+  {
+    "type": "worker",
+    "title": "咒術迴戰",
+    "logo": "JujutsuLogo",
+    "id": "19960703",
+    "info": "上記の人員証明書は当社の従業員です。",
+    "hero": {
+      "name": "七海 建人",
+      "birthdate": "1996年7月3日",
+      "avatar": "NanamiKento",
+      "level": "一"
     }
   }
 ]

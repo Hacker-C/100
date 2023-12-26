@@ -25,24 +25,35 @@ export function HeroIDCard(props: HeroIDCardProps) {
       className='px2 py8 font-song h-center mt5 bg-white w-[360px] shadow-xl'
     >
       <header className='flex items-center'>
-        <img src={imageMap.get(logo)} className='w7' />
+        <img src={imageMap.get(logo)} className='h6' />
         <h1 className='text-[16px] ml3'>{title}</h1>
         <div flex='1' />
         <span className='self-end text-sm'>
           【{
-            type === 'student' ? '学生証' : '教師証'
+            type === 'student'
+              ? '学生証'
+              : type === 'teacher'
+                ? '教師証'
+                : '工作証'
           }】
         </span>
       </header>
       <main className='mt2 mx2 flex justify-between'>
         <div className='leading-3 w-[225px]'>
           <div>
-            <span className='text-sm'>{type === 'student' ? '学籍番号' : '教師番号'} <span font='bold'>{id}</span></span>
+            <span className='text-sm'>
+              {type === 'student'
+                ? '学籍番号'
+                : type === 'teacher'
+                  ? '教師番号'
+                  : '工作番号'
+                }
+            <span font='bold'> {id}</span></span>
           </div>
           <div className='text-lg'>
             氏名 <span className='font-bold'>{name}</span>
           </div>
-          <div font='bold' className='text-sm'>{birthdate} 生</div>
+          <div font='bold' className='text-sm h5'>{birthdate ? `${birthdate} 生` : ''}</div>
           <p text=' 0.7rem' mb='1.5'>{info}</p>
           <div className='overflow-hidden'>
             <BarCode />
@@ -67,9 +78,14 @@ function Level(props: { level: string }) {
       border-2 border-solid border-black
       ${`${level.length === 1 ? 'text-2xl' : 'text-md'}`}
     `
+  const color = level === '特' ? '#f0341c' : ''
   return (
     <div
       className={clazz}
+      style={{
+        color,
+        borderColor: color
+      }}
     >
       {level}
     </div>

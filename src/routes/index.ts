@@ -9,6 +9,7 @@ const JoJoCards = lazy(() => import('@/apps/004.JoJoCards'))
 const Calculator = lazy(() => import('@/apps/005.Calculator'))
 const ChristmasLights = lazy(() => import('@/apps/006.ChristmasLights'))
 const JujutsuIDCard = lazy(() => import('@/apps/007.JujutsuIDCard'))
+const WorkClockOff = lazy(() => import('@/apps/008.WorkClockOff'))
 
 export interface RouteType {
   path: string
@@ -73,6 +74,13 @@ const routes: RouteType[] = [
     element: JujutsuIDCard,
     meta: {
       title: 'Jujutsu ID Card'
+    }
+  },
+  {
+    path: '008',
+    element: WorkClockOff,
+    meta: {
+      title: 'Work Clock Off'
     }
   },
   {

@@ -15,7 +15,8 @@ export default defineConfig({
   ],
   shortcuts: {
     'bg': 'bg-red-800',
-    'flex-center': 'flex justify-center items-center'
+    'flex-center': 'flex justify-center items-center',
+    'pos-center': 'relative left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]'
   },
   rules: [
     ['centered', {

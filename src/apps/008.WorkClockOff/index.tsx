@@ -38,7 +38,7 @@ export default function WorkClockOff() {
           </div>
           <img src={Run} alt='run' w='70' />
         </div>
-      <div text-xl text-center mt5>Ready to clock off 🏃‍♂️</div>
+      <div text-xl text-center mt5 dark:text-white>Ready to clock off 🏃‍♂️</div>
       </div>
     </div>
   </AppWrapper>

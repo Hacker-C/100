@@ -4,7 +4,7 @@
 🚀 Working in Progress
 </pre>
 
-Link: https://100a.netlify.app
+Link: https://100.mphy.top
 
 Try to implement apps from [here](https://github.com/florinpop17/app-ideas) with React. 
 

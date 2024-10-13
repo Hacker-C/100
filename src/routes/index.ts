@@ -10,6 +10,7 @@ const Calculator = lazy(() => import('@/apps/005.Calculator'))
 const ChristmasLights = lazy(() => import('@/apps/006.ChristmasLights'))
 const JujutsuIDCard = lazy(() => import('@/apps/007.JujutsuIDCard'))
 const WorkClockOff = lazy(() => import('@/apps/008.WorkClockOff'))
+const PictureToCSS = lazy(() => import('@/apps/009.PictureToCSS'))
 
 export interface RouteType {
   path: string
@@ -81,6 +82,13 @@ const routes: RouteType[] = [
     element: WorkClockOff,
     meta: {
       title: 'Work Clock Off'
+    }
+  },
+  {
+    path: '009',
+    element: PictureToCSS,
+    meta: {
+      title: 'Picture To CSS'
     }
   },
   {

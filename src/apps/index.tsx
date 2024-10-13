@@ -15,6 +15,7 @@ const routes = [
   { path: '006', title: 'Christmas Lights' },
   { path: '007', title: 'Jujutsu ID Card' },
   { path: '008', title: 'Work Clock Off' },
+  { path: '009', title: 'Picture To CSS' },
   { path: '*', title: 'Page not found' }
 ]
 

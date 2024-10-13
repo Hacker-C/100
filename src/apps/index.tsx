@@ -45,7 +45,7 @@ const Home: FC = () => {
         }
       </div>
       <div text-gray-500 mt5>
-        <a href="https://mphy.me" target="_blank" hover:text-primary>@mphy</a>
+        <a href="https://mphy.top" target="_blank" hover:text-primary>@mphy</a>
         <span> · </span>
         <a href="https://github.com/Hacker-C/100" target="_blank" hover:text-primary>github</a>
         <span> · </span>

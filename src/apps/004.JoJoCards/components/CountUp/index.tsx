@@ -10,7 +10,7 @@ interface Props {
 export default function ({ status = 'ready' }: Props) {
   // 计时器
   const [count, setCount] = useState(0)
-  const timer = useRef<NodeJS.Timer | number>()
+  const timer = useRef<NodeJS.Timeout>()
   useEffect(() => {
     if (status === 'ready') {
       setCount(0)
